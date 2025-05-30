@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marcus - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    #menu-toggle {
+      display: none;
+      background: none;
+      border: 2px solid white;
+      padding: 5px 10px;
+      font-size: 24px;
+      color: white;
+      border-radius: 4px;
+    }
+
+    section {
+      padding: 60px 40px;
+    }
+
+    section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      border-left: 4px solid black;
+      padding-left: 10px;
+    }
+
+    section p, section ul li {
+      font-size: 18px;
+      max-width: 800px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Marcus</h1>
+    <button id="menu-toggle">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>À propos</h2>
+    <p>
+      Je suis Marcus, étudiant en première année d'informatique à l'Université Protestante au Congo.
+      Curieux, déterminé et passionné par les nouvelles technologies, j’apprends à coder en C, Python, HTML et CSS,
+      avec l'objectif de développer des solutions digitales innovantes. En dehors des cours, je suis un joueur de football
+      évoluant comme ailier gauche, reconnu pour ma vitesse, ma capacité de percussion et ma détermination sur le terrain.
+    </p>
+    <p>
+      Mon but est de combiner performance académique et sportive pour bâtir un futur solide, équilibré et inspirant.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projets</h2>
+    <ul>
+      <li>Création de mon premier portfolio personnel</li>
+      <li>Développement d'une application mobile simple avec Flutter (à venir)</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 marcustabu11@icloud.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Marcus</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
